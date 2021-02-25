@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data",
+  "info": {
+    "name": "data",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "movies": {
+      "collection": "movies",
+      "via": "data",
+      "dominant": true
+    }
+  }
+}
