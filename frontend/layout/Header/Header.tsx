@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {
     BrandLogo,
@@ -8,14 +8,25 @@ import {
 
 import Menu from "./sub/Menu"
 
+const SCROLL_DISTANCE = 10
+
 const Header = ({
     links, 
 }) => {
-
+        const [scroll, setScroll] = useState(false)
+        
+        useEffect(() => {
+          window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > SCROLL_DISTANCE);
+          });
+        }, []); 
+     
     return (
-        <HeaderWrapper>
+        <HeaderWrapper
+          position={scroll}
+        >
             <HeaderContent>
-            <BrandLogo>Demo Store</BrandLogo>
+            <BrandLogo>Popcorn Movies</BrandLogo>
             <Menu 
                 links={links}
             />

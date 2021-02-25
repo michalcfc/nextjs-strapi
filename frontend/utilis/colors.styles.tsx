@@ -9,5 +9,5 @@ export default {
         lightGray: "#efefef",
         lightBlue: "#edf2f7",
         dark: '#212332',
-        darkBlue: '#1c3faa',
+        darkPurple: '#27253a',
 }

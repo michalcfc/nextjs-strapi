@@ -16,6 +16,7 @@ declare module 'styled-components' {
     spacing: {
       [el: string]: string
     }
-    buttonColor: {}
+    buttonColor: {},
+    buttonBackground: {}
   }
 }

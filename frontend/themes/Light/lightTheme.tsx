@@ -12,6 +12,9 @@ export const lightTheme: DefaultTheme = {
   buttonColor: {
     colors,
   },
+  buttonBackground: {
+    colors,
+  },
   colors,
   spacing
 }

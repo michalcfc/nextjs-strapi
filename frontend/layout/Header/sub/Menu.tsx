@@ -4,6 +4,8 @@ import {
     MenuItem
 } from "./Menu.styles"
 
+import Link from 'next/link'
+
 import { MenuProps } from "./Menu.d"
 
 
@@ -13,14 +15,11 @@ const Menu: React.FC<MenuProps> = ({
     return (
         <MenuWrapper>
             {links.map((link, id) => {
-               return <MenuItem key={id}>{link.name}</MenuItem> 
+               return <MenuItem key={id}>
+                   <Link href="/contact">{link.name}</Link>
+                </MenuItem> 
             })}
-            <MenuItem.Icon>
-            </MenuItem.Icon>
             
-            <MenuItem>
-                Hi, Michal
-            </MenuItem>
         </MenuWrapper>
     )
 }

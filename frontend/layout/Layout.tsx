@@ -10,23 +10,26 @@ const Layout = ({children}) => {
 
     const menuLinks = [
         {
-            name: 'Contact'
+            name: 'TV'
         },
         {
-            name: 'Wishlist'
-        }
+            name: 'Netflix'
+        },
+        {
+            name: 'Contact'
+        },
     ]
     return (
        
-        // <Wrapper>
-            // <Header 
-            //     links={menuLinks}
-            // />
+        <Wrapper>
+            <Header 
+                links={menuLinks}
+            />
             <Main>
                 {children}
             </Main>
-            // <Footer/>
-        // {/* </Wrapper> */}
+            <Footer/>
+        </Wrapper>
         
     )
 }

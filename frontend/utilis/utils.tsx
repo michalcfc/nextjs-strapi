@@ -1,4 +1,4 @@
-const baseUrl = process.env.BASE_URL
+export const baseUrl = process.env.BASE_URL
 export function getStrapiURL(path) {
     console.log(process.env)
     return `${
@@ -14,7 +14,12 @@ export async function fetchAPI(path) {
     return data;
   }
 
-  export async function getMovies() {
-    const movies = await fetchAPI("/movies");
+  export async function getMovies(params = null) {
+    let movies
+    if (params !== null) {
+       movies = await fetchAPI(`/movies/${params}`);
+    } else {
+       movies = await fetchAPI(`/movies`);
+    }
     return movies;
   }
